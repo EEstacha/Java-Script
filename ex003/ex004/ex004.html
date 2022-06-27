@@ -7,9 +7,14 @@
     <title>Documento</title>
 </head>
 <body>
+    <h1>Estudo do caso</h1>
     <script>
         var nome = window.prompt('qual é o seu nome')
-        document.write(`Olá ${nome} seu nome tem ${nome.length} letras`)
+        //formatacao de string
+        document.write(`Olá <strong>${nome} </strong>seu nome tem <strong>${nome.length}</strong> letras <br>`)
+        document.write(`Seu nome em maisculas fica assim ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minusculas fica assim ${nome.toLowerCase()} <br>`)
+        //formatacao de numero
     </script>
 </body>
 </html>
