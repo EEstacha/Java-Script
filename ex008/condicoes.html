@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Multas</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            padding-left: 20px;
+            width: 700px;
+        }
+        section{
+            background-color: lightgrey;
+            width: 600px;
+        }
+        input {
+            border-radius: 2px;
+            color: black;
+        }
+        div#res {
+            width: 580px;
+            height: 140px;
+            background-color: rgb(119, 119, 124);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
     <script>
         function calcular() {
+            var agora = new Date()
             var veloc = window.document.getElementById('cVel')
             var vel = Number(veloc.value)
             var paisOrg = window.document.getElementById('cPais')
@@ -17,25 +42,28 @@
                 res.innerHTML = `<p>Você é Estrangeiro proveniente de <strong>${pais}</strong></p>`
             }
             if (vel>60) {
-                res.innerHTML += `<p>A sua velocidade actual é de<strong> ${vel} Km/h</strong>. Você está multado por excesso de velocidade.</p>`
-                res.innerHTML += '<p>Seja Prudente, Use o cinto de Segurança e Evite acidente. BOA VIAGEM</p>'
+                res.innerHTML += `<p>Você estava dirigindo a velocidade de<strong> ${vel} Km/h</strong>. Está multado por excesso de velocidade.</p>`
+                res.innerHTML += '<p>Seja Prudente, Use o cinto de Segurança e Evite acidente.<strong> BOA VIAGEM!</strong></p>'
 
             } else {
-                res.innerHTML += '<p>Use cinto de segurança</p>'
+                res.innerHTML += `<p>Você estava dirigindo a velocidade de<strong> ${vel} Km/h</strong>.`
+                res.innerHTML += '<p>Seja Prudente, Use o cinto de Segurança e Evite acidente.<strong> BOA VIAGEM</strong></p>'
             }
+        
         }
     </script>
 
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
-    <h2>Captação de Dados</h2>
-    <p><label for="cPais">Pais de Origem:</label> <input type="text" name="tPais" id="cPais" placeholder="Inserir Pais de Origem" maxlength="20"></p>
-    <p><label for="cVel">Velocidade:</label> <input type="number" name="tVel" id="cVel" maxlength="3" min="0" placeholder="inserir a velocidade"> Km/h 
-    <input type="button" value="Verificar" onclick="calcular()"></p>
-    <div id="res">
-
-    </div>
+    <section>
+        <h1>Sistema de Multas</h1>
+        <h2>Captação de Dados</h2>
+        <p><label for="cPais">Pais de Origem:</label> <input type="text" name="tPais" id="cPais" placeholder="Inserir Pais de Origem" maxlength="20"></p>
+        <p><label for="cVel">Velocidade:</label> <input type="number" name="tVel" id="cVel" maxlength="2" min="0" placeholder="inserir a velocidade"> Km/h
+        <input type="button" value="Verificar" onclick="calcular()"></p>
+        <div id="res">
+        </div>
+    </section>
 
 </body>
 </html>
