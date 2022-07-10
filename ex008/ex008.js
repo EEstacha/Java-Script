@@ -1,4 +1,4 @@
-var idade = 30
+var idade = 78
 var agora = new Date()
 var horas = agora.getHours()
 var minutos = agora.getMinutes()
