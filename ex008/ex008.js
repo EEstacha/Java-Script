@@ -1,15 +1,24 @@
-var pais = 'Malawi'
-var vel = 80
-console.log(`Vivendo em ${pais},`)
-
-if(pais== 'Moçambique'){
-    console.log('Você é Moçambicano')
-}  else{
-    console.log('Você é Estrangeiro')
+var idade = 30
+var agora = new Date()
+var horas = agora.getHours()
+var minutos = agora.getMinutes()
+if(idade<16) {
+    console.log('Não vota')
+}else if(idade<18 || idade>65) {
+    console.log('voto Opcional')
+}else {
+    console.log('Voto Obrigatório')
 }
-console.log(`A sua velocidade é de ${vel} km/h`)
-if(vel>60){
-    console.log(`Está multado por Condução com excesso de velocidade, obrigado`)
-} else{
-    console.log('Use sempre o cinto de seguraça, boa viagem')
+console.log(`Agora são exactamente ${horas} Hr ${minutos} Min`)
+if(horas>3 && horas<12){
+    console.log('Bom Dia')
+}else if(horas>=12 && horas<18){
+    console.log('Boa tarde')
+
+}else if(horas>18 && horas<=24){
+   console.log('Boa Noite')
+}else if(horas<=3){
+    console.log('Boa Madrugada')
+}else{
+    console.log('Hora Invalida')
 }

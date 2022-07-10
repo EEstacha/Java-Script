@@ -23,7 +23,7 @@
         }
         div#res {
             width: 580px;
-            height: 140px;
+            height: 160px;
             background-color: rgb(119, 119, 124);
             padding: 5px;
             border-radius: 5px;
@@ -32,6 +32,8 @@
     <script>
         function calcular() {
             var agora = new Date()
+            var minutos =agora.getMinutes()
+            var horas = agora.getHours()
             var veloc = window.document.getElementById('cVel')
             var vel = Number(veloc.value)
             var paisOrg = window.document.getElementById('cPais')
@@ -44,10 +46,12 @@
             if (vel>60) {
                 res.innerHTML += `<p>Você estava dirigindo a velocidade de<strong> ${vel} Km/h</strong>. Está multado por excesso de velocidade.</p>`
                 res.innerHTML += '<p>Seja Prudente, Use o cinto de Segurança e Evite acidente.<strong> BOA VIAGEM!</strong></p>'
+                res.innerHTML += `<p>${horas}h${minutos}min</p>`
 
             } else {
                 res.innerHTML += `<p>Você estava dirigindo a velocidade de<strong> ${vel} Km/h</strong>.`
                 res.innerHTML += '<p>Seja Prudente, Use o cinto de Segurança e Evite acidente.<strong> BOA VIAGEM</strong></p>'
+                res.innerHTML += `<p>${horas}h${minutos}min</p>`
             }
         
         }
