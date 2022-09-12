@@ -10,7 +10,7 @@ do{
     c++
 } while(c<=5)  
 
-for(var c = 1; c <= 6; c++){
+for(var c = 1; c <= 8; c+=2){
     console.log(c)
 }
 

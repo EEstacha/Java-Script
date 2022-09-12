@@ -2,6 +2,7 @@
 body{
     background-color: rgb(70, 142, 236);
     font: normal 15pt arial;
+    
 }
 
 header{
@@ -18,8 +19,11 @@ section{
     margin: auto;
     box-shadow: 3px 3px 5px black;
 }
+select#flista {
+    width: 150px;
+}
 div#res{
-    text-align: center;
+   
     padding: 8px;
 }
 
